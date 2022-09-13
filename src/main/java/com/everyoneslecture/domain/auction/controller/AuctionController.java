@@ -81,7 +81,7 @@ public class AuctionController {
 				}
 			}
 			if(auctionCnt < 1 || auctionResultDtoList.size() == 0){
-				//경매 미등록건도 취소할 수가 없어야 한다.
+				//경매 미등록건도 취 소할 수가 없어야 한다.
 				return "경매가 등록되어 있지 않습니다.";
 			}
 
@@ -91,7 +91,7 @@ public class AuctionController {
 			Auction auction = new Auction();
 			System.out.println(lectIds.get(i));
 			lectId = Long.parseLong((String) lectIds.get(i));
-			auction.setLectId(lectId);	
+			auction.setLectId(lectId);
 			auctionService.cancelAuction(auction);
 		}
 		return "경매가 취소되었습니다.";
@@ -134,10 +134,10 @@ public class AuctionController {
 			Auction auction = new Auction();
 			auction.setEndAuctionDate(auctionDto.getEndAuctionDate());
 			auction.setStartAuctionDate(auctionDto.getStartAuctionDate());
-			
+
 			System.out.println(lectIds.get(i));
 			lectId = Long.parseLong((String) lectIds.get(i));
-			auction.setLectId(lectId);	
+			auction.setLectId(lectId);
 			auctionService.registerAuction(auction);
 		}
 		return "경매가 시작 되었습니다.";
