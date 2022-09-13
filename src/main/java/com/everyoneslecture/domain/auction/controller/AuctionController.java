@@ -81,7 +81,7 @@ public class AuctionController {
 				}
 			}
 			if(auctionCnt < 1 || auctionResultDtoList.size() == 0){
-				//경매 미등록건도 취 소할 수가 없어야 한다.
+				//경매 미등록건도 취   소할 수가 없어야 한다.
 				return "경매가 등록되어 있지 않습니다.";
 			}
 
