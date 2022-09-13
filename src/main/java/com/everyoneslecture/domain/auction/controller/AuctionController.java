@@ -73,7 +73,7 @@ public class AuctionController {
 				System.out.println(auctionResultDtoList.get(j).getAuctionStatus().toString());
 				System.out.println(73);
 				if(AuctionStatus.BID_SUCCESS.toString().equals(auctionResultDtoList.get(j).getAuctionStatus().toString()) ){
-					//경매완료인 건이 있으면 막는다.
+					//경매완료인 건이 있으면  막는다.
 					return auctionResultDtoList.get(j).getAuctionStatus();
 				}
 				if(AuctionStatus.AUCTION.toString().equals(auctionResultDtoList.get(j).getAuctionStatus().toString())){
